@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #ffce00;
+    background-image: url(imgs/fondito.jpg);
+    background-size: cover;
+    color: white;
+}
+
+hr {
+   background: rgba(255, 191, 103, 0.0); 
+    border: 0; 
+    height: 20px; 
+}
+
+h1 {
+    font-weight: 800;
+    text-align: center;
+    margin: 50px 0 20px 0;
+}
+
+h3 {
+    margin-left: 15px
+}
+
+section {
+    padding: 10px;
+}
+
+input, select {
+    margin: 6px;
+    padding: 5px;
+    width: 140px;
+    border-width: 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+}
+
+button {
+    margin: 6px;
+    padding: 8px;
+    border-radius: 20px;
+    border-width: 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+    background-color: #6425f0;
+    color: white;
+}
+

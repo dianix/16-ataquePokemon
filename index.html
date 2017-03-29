@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ataque pokemon</title>
+    <link rel="shorcut icon" type="image/x-icon" href="assets/imgs/iconito.ico">
+    <link rel="stylesheet" href="assets/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600,800" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Ataque Pokemon</h1>
+    <h3>Crea un pokemon</h3>
+    <section id="crearPokemon">
+        <input type="text" id="nombrePokemon" placeholder="Nombre del pokemon">
+        <input type="text" id="colorPokemon" placeholder="Color del pokemon">
+        <input type="text" id="puntosAtaque" placeholder="Puntos de ataque">
+        <div id="listaDePokemones"></div>
+        <button type="button" onclick="crearPokemon()">Crear pokemon</button>
+    </section>
+    <hr>
+    <h3>Elige los pokemones contrincantes</h3>
+    <section id="elegirPokemones">
+        <select id="opcionesPokemon1" onchange="contrincante1()"></select>
+        <select id="opcionesPokemon2" onchange="contrincante2()"></select>
+        <button type="button" onclick="atacar()">Atacar</button>
+    </section>
+    <hr>
+    <h3>Resultado del ataque</h3>
+    <section id="mostrarResultado">
+        <p id="resultadoAtaque"></p>
+    </div>
+    
+    <script src="assets/pokedex.js"></script>
+</body>
+</html>
