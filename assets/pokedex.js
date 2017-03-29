@@ -44,10 +44,15 @@ function crearPokemon(){
                               colorPokemon.value, 
                               parseInt(puntosAtaque.value)
                              );
+    // agrego pokemon nuevo al arreglo
     pokemones.push(pokemon);
+    
+    // vacío las casillas de los inputs
     nombrePokemon.value = "";
     colorPokemon.value = "";
     puntosAtaque.value = "";
+    
+    // envío el nuevo pokemon a los dos selects
     agregarPokemones1(pokemon);
     agregarPokemones2(pokemon);
 }
@@ -68,8 +73,7 @@ function agregarPokemones2(pokemon){
     opcionesPokemon2.appendChild(elemento);
 }
 
-// *** PARA ESCOGER POKEMONES *** 
-//ya logré obtener los objetos pokemon escogidos, no sé cómo mandarlos al ataque T_T
+// *** PARA OBTENER POKEMONES SELECCIONADOS *** 
 function contrincante1(){
     var posicionPokemon1 = document.getElementById("opcionesPokemon1").selectedIndex;
     console.log(posicionPokemon1);
@@ -83,17 +87,21 @@ function contrincante2(){
     return pokemon2;
 }
 
-// *** PARA ATAQUE DE POKEMONES *** T_T
+// *** PARA ATAQUE DE POKEMONES ***
 function atacar() {
+    // llamo a los pokemones que pelearán
     var pok1 = contrincante1();
     var pok2 = contrincante2();
-    console.log(pok1);
+    
+    // condición para que un pokemon no pelee contra si mismo
     if(pok1.nombre == pok2.nombre){
-        alert("Este pokemon no puede pelear contra si mismo")        
+        alert(pok1.nombre + " no puede pelear contra si mismo, elije otro contrincante")        
     } else {
         pok1.pelear(pok2);
-        console.log(pok2.vida);
         
+        // envío resultado del ataque al elemento correspondiente de html
+        var resultado = document.getElementById("resultadoAtaque");
+        resultado.innerHTML = pok2.nombre + " tiene vida de: " + pok2.vida;
     }
 }
 
